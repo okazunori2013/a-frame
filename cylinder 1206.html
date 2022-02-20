@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>cylinder</title>
+	<script src="./three.min.js"></script>
+	<script>
+		window.addEventListener('load',initial);
+
+		function initial(){
+
+		const width = 1080;
+		const height = 720;
+
+		const renderer = new THREE.WebGLRenderer({
+			canvas: document.querySelector('#myCanvas')
+		});
+		renderer.setPixelRatio(window.devicePixelRatio);
+		renderer.setSize(width,height);
+
+		const scene = new THREE.Scene();
+		
+		const camera = new THREE.PerspectiveCamera(60, width/height);
+		camera.position.set(0,0,1000);
+
+		const Sphere =[];
+		const geometry = [];
+		const material = [];
+		var xspeed = 10;
+		var yspeed = 10;
+		var zspeed = 15;
+		
+
+		geometry[0] = new THREE.SphereGeometry(100, 22, 18);
+		material[0] = new THREE.MeshStandardMaterial({color:0xFFD700, roughness: 0.0});
+		Sphere[0] = new THREE.Mesh(geometry[0],material[0]);
+		Sphere[0].position.set(0,100,100);
+		scene.add(Sphere[0]);
+		const Dlight = new THREE.DirectionalLight(0xfffff,1);
+		scene.add(Dlight) ;
+		Dlight.position.set(1000,0,1000);
+
+		Tick();
+			function Tick(){
+				Sphere[0].position.x　+= xspeed;
+				Sphere[0].position.y　+= yspeed;
+				Sphere[0].position.z　+= zspeed;
+				if (Sphere[0].position.x >= 1080/2+100 || Sphere[0].position.x <= -1080/2-100) {
+					xspeed　*= -1;
+				}
+
+				if (Sphere[0].position.y >= 720/2+50 || Sphere[0].position.y <= -720/2-50){
+					yspeed　*= -1;
+				}
+				if (Sphere[0].position.z >= 500 || Sphere[0].position.z <= -500){
+					zspeed　*= -1;
+				}
+				renderer.render(scene,camera);
+
+				requestAnimationFrame(Tick);
+			}
+		}
+	</script>
+	</head>
+<body>
+ <canvas id = "myCanvas"></canvas>
+</body>
+</html>

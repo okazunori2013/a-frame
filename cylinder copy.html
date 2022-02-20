@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>cylinder</title>
+	<script src="./three.min.js"></script>
+	<script>
+		window.addEventListener('load',initial);
+
+		function initial(){
+
+		const width = 1080;
+		const height = 720;
+
+		const renderer = new THREE.WebGLRenderer({
+			canvas: document.querySelector('#myCanvas')
+		});
+		renderer.setPixelRatio(window.devicePixelRatio);
+		renderer.setSize(width,height);
+
+		const scene = new THREE.Scene();
+		
+		const camera = new THREE.PerspectiveCamera(60, width/height);
+		camera.position.set(0,0,1000);
+
+		const Sphere =[];
+		const geometry = [];
+		const material = [];
+		var speed = 5;
+
+		geometry[0] = new THREE.SphereGeometry(100, 22, 18);
+		material[0] = new THREE.MeshBasicMaterial({color:0xFFD700});
+		Sphere[0] = new THREE.Mesh(geometry[0],material[0]);
+		Sphere[0].position.set(0,100,100);
+		scene.add(Sphere[0]);
+
+
+		Tick();
+			function Tick(){
+				Sphere[0].position.x　+= speed;
+				if (Sphere[0].position.x >= 1080/2+100 || Sphere[0].position.x <= -1080/2-100) {
+					speed　*= -1;
+				}
+				renderer.render(scene,camera);
+
+				requestAnimationFrame(Tick);
+			}
+		}
+	</script>
+	</head>
+<body>
+ <canvas id = "myCanvas"></canvas>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>animation_1</title>
+	<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+	</head>
+	<body>
+		<a-scene>
+		<a-sky color="#a0d8ef"></a-sky>
+		<a-box position="0.0 1.0 -4"rotation="45 0 0"color="#f19072" shadow
+		animation="property: rotation; from: 0 0 0; to: 360 360 0; loop: true; dur: 3000; easing:linear;delay:1000"
+		animation__2="property: scale; from: 1.5 1.5 1.5; to: 0.1 0.1 0.1 ; dur:1500; loop: true; dir:alternate;"
+		animation__3="property: material.color; from: #f19072; to: #a0d8ef ; loop: true dir:reverse ; dur: 90000;"></a-box>
+		<a-torus position="0 0 -5" radius="5"rotation="0 0 0" color="#63ff47" radius-tubular="0.5"></a-torus>
+		</a-scene>
+	</body>
+</html>

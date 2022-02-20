@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>cylinder</title>
+	<script src="./three.min.js"></script>
+	<script>
+		window.addEventListener('load',initial);
+
+		function initial(){
+
+		const width = 1080;
+		const height = 720;
+
+		const renderer = new THREE.WebGLRenderer({
+			canvas: document.querySelector('#myCanvas')
+		});
+		renderer.setPixelRatio(window.devicePixelRatio);
+		renderer.setSize(width,height);
+
+		const scene = new THREE.Scene();
+		
+		const camera = new THREE.PerspectiveCamera(60, width/height);
+		camera.position.set(0,0,1000);
+
+		const box =[];
+		const geometry = [];
+		const material = [];
+		
+		geometry[0]= new THREE.BoxGeometry(200, 200, 200);
+		material[0] = new THREE.MeshBasicMaterial({color:0xFFD700});
+		box[0] = new THREE.Mesh(geometry[0],material[0]);
+		box[0].position.set(0,100,100);
+		scene.add(box[0]);
+
+		geometry[1] = new THREE.BoxGeometry(200, 200, 200);
+		material[1] = new THREE.MeshBasicMaterial({color:0xee4600});
+		box[1]= new THREE.Mesh(geometry[1],material[1]);
+		box[1].position.set(200,300,100);
+		scene.add(box[1]);
+
+		geometry[2] = new THREE.BoxGeometry(200, 200, 200);
+		material[2] = new THREE.MeshBasicMaterial({color:0x0000CD});
+		box[2] = new THREE.Mesh(geometry[2],material[2]);
+		box[2].position.set(-200,-100,100);
+		scene.add(box[2]);
+
+		Tick();
+			function Tick(){
+			box[0].rotation.y　+= 0.01;
+			box[1].rotation.y  += 0.01;
+			box[2].rotation.y  += 0.01;
+
+			renderer.render(scene,camera);
+
+			requestAnimationFrame(Tick);
+					}
+		}
+	</script>
+</head>
+<body>
+ <canvas id = "myCanvas"></canvas>
+</body>
+</html>

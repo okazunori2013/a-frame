@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>3objects_1tt.html</title>
+	<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+	</head>
+	<body>
+		<a-scene>
+			<a-box position="-1 0.5 -4"rotation="0 45 0"color="#aa89bd"shadow></a-box>
+			<a-sphere position="-1 2.6 -4" radius="1.6" color="#cf4078"shadow></a-sphere>
+			<a-cone position="-1  5.8 -4" height="3.2" radius-bottom="0.8" rotation="0 0 0" color="#68be8d"shadow></a-cone>
+			<a-plane position="1.5 0 -6.4"rotation="-90 0 0" width="6.4" height="6.4" color="#5d2917"shadow></a-plane>
+			<a-entity
+			line__z="start: 0, 1.6, 10; end: 0, 1.6, -10; color: #ff0000"
+			line__x="start: -10, 1.6, 0; end: 10, 1.6, 0; color: #00ff00"
+			line__y="start: 0,8.4, 0; end: 0, 11.6, 0; color: #0000ff">
+			</a-entity>
+		</a-scene>
+	</body>
+</html>

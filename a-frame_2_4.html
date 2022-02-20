@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>a-frame_2_4</title>
+	<script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+	</head>
+	<body>
+		<a-scene>
+			<a-cylinder position="0 1 -5" radius="0.8" height="2" color="#a8cbcd"></a-cylinder>
+			<a-cylinder position="2 0.1 -5" radius="1.0" height="0.5" color="#bf4e3e" open-ended="true" ></a-cylinder>
+			<a-cylinder position="2 0.1 -7" radius="1.0" height="0.2" color="#3b7960" segment-radial="6" ></a-cylinder>
+			<a-cylinder position="0 0.5 -7" thteta-start="50" theta-length="280" color="#deb068" side=double></a-cylinder>
+			<a-tetrahedron position="-2 0.5 -7" radius="1" color="#a0d8ef"></a-tetrahedron>
+			<a-octahedron position="2 1 -9" radius="1" color="#ff00ff" height="1"></a-octahedron>
+			<a-dodecahedron position="-2 1 -9" radius="1" color="#ff0000" height="1"></a-dodecahedron>
+			<a-icosahedron position="-0 1 -9" radius="1" color="#ff0000" height="1"></a-icosahedron>
+			<a-text value="Hello,World!" position="0 1 -5" color="#3f7955"></a-text>
+			<a-plane position="0 0 -6.4"rotation="-90 0 0" width="10" height="6.4" color="#ff0000"shadow></a-plane>
+			<a-entity
+			line__z="start: 0, 1.6, 10; end: 0, 1.6, -10; color: #ff0000"
+			line__x="start: -10, 1.6, 0; end: 10, 1.6, 0; color: #00ff00"
+			line__y="start: 0,-8.4, 0; end: 0, 11.6, 0; color: #0000ff">
+			</a-entity>
+	</body>
+</html>

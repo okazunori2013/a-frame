@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>sphere_1</title>
+	<script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+	</head>
+	<body>
+		<a-scene>
+			<a-sphere position="0 1.6 -6.4" radius="1.6" color="#cf4078"shadow></a-sphere>
+			<a-plane position="0 0 -6.4"rotation="-90 0 0" width="6.4" height="6.4" color="#5d2917"shadow></a-plane>
+			<a-plane position="-3.2 3.2 -6.4"rotation="0 90 0"width="6.4" height="6.4" color="#0000ff" ></a-plane>
+			<a-plane position="-3.2 3.2 -6.4"rotation="0 -90 0"width="6.4" height="6.4" color="#0000ff" ></a-plane>
+			<a-plane position="0 6.4 -6.4"rotation="90 0 0" width="6.4" height="6.4" color="#5d2917"shadow></a-plane>
+			<a-plane position="3.2 3.2 -6.4"rotation="0 -90 0"width="6.4" height="6.4" color="#0000ff" ></a-plane>
+			<a-plane position="3.2 3.2 -6.4"rotation="0 90 0"width="6.4" height="6.4" color="#0000ff" ></a-plane>
+			<a-entity
+			line__z="start: 0, 1.6, 10; end: 0, 1.6, -10; color: #ff0000"
+			line__x="start: -10, 1.6, 0; end: 10, 1.6, 0; color: #00ff00"
+			line__y="start: 0,8.4, 0; end: 0, 11.6, 0; color: #0000ff">
+			</a-entity>
+		</a-scene>
+	</body>
+</html>

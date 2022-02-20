@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>cylinder</title>
+	<script src="./three.min.js"></script>
+	<script>
+		window.addEventListener('load',initial);
+
+		function initial(){
+
+		const width = 1080;
+		const height = 720;
+
+		const renderer = new THREE.WebGLRenderer({
+			canvas: document.querySelector('#myCanvas')
+		});
+		renderer.setPixelRatio(window.devicePixelRatio);
+		renderer.setSize(width,height);
+
+		const scene = new THREE.Scene();
+		
+		const camera = new THREE.PerspectiveCamera(60, width/height);
+		camera.position.set(0,0,1000);
+
+		const Sphere =[];
+		const geometry = [];
+		const material = [];
+		var speed = 8;
+		var Rad = 0;
+
+		geometry[0] = new THREE.SphereGeometry(20, 22, 18);
+		material[0] = new THREE.MeshStandardMaterial({color:0xFFD700, roughness: 0.0});
+		Sphere[0] = new THREE.Mesh(geometry[0],material[0]);
+		Sphere[0].position.set(-500,100,100);
+		scene.add(Sphere[0]);
+		geometry[1] = new THREE.SphereGeometry(100, 22, 18);
+		material[1] = new THREE.MeshStandardMaterial({color:0xfc0000, roughness: 1.0});
+		Sphere[1] = new THREE.Mesh(geometry[1],material[1]);
+		Sphere[1].position.set(0,100,100);
+		scene.add(Sphere[1]);
+		const Dlight = new THREE.DirectionalLight(0xfffff,1);
+		scene.add(Dlight) ;
+		Dlight.position.set(1000,1000,1000);
+
+
+		Tick();
+			function Tick(){
+				Rad += 1 * Math.PI / 180;
+				Sphere[0].position.x　+= Math.sin(Rad)*speed;
+				Sphere[0].position.y　+= Math.cos(Rad)*speed;
+				renderer.render(scene,camera);
+
+				requestAnimationFrame(Tick);
+			}
+		}
+	</script>
+	</head>
+<body>
+ <canvas id = "myCanvas"></canvas>
+</body>
+</html>

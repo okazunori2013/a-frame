@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>aframe_2_8_1.html</title>
+	<script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+	<script src="https://unpkg.com/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+	</head>
+	<body>
+		<a-scene physics>
+		<a-box position="-2.2 1.5 -4"rotation="0 45 0"color="#aa89bd" dynamic-body shadow></a-box>
+		<a-entity camera="" position="0 1.6 5" wasd-controls="" rotation="" look-controls="" aframe-injected="" data-aframe-inspector-original-camera=""></a-entity>
+		<a-sphere position="-0.4 2.6 -5.4" radius="1.6" color="#cf4078" dynamic-body shadow></a-sphere>
+		<a-cone position="1.6  1.8 -4.5" height="3.2" radius-bottom="0.8" rotation="0 0 0" color="#68be8d" dynamic-body shadow></a-cone>
+		<a-plane position="0 0 -6.4"rotation="-90 0 0" width="6.4" height="6.4" color="#5d2917" static-body shadow></a-plane>
+		<a-torus position="	1.8	10	-4.5	" arc="10" radius="4"rotation="0 90 0" color="#63ff47" radius-tubular="0.5" dynamic-body></a-torus>
+		<a-torus position="	1.8	10.1	-4.5	" arc="10" radius="4"rotation="0 90 0" color="#63ff47" radius-tubular="0.6" dynamic-body></a-torus>
+		<a-torus position="	1.8	10.2	-4.5	" arc="10" radius="4"rotation="0 90 0" color="#63ff47" radius-tubular="0.7" dynamic-body></a-torus>
+		<a-torus position="	1.8	10.3	-4.5	" arc="10" radius="4"rotation="0 90 0" color="#63ff47" radius-tubular="0.8" dynamic-body></a-torus>
+		<a-torus position="	1.8	10.4	-4.5	" arc="10" radius="4"rotation="0 90 0" color="#63ff47" radius-tubular="0.9" dynamic-body></a-torus>
+		<a-torus position="	1.8	10.5	-4.5	" arc="30" radius="4"rotation="0 90 0" color="#63ff47" radius-tubular="0.10" dynamic-body></a-torus>
+		<a-torus position="	1.8	10.6	-4.5	" arc="30" radius="4"rotation="0 90 0" color="#63ff47" radius-tubular="0.11" dynamic-body></a-torus>
+		<a-torus position="	1.8	10.7	-4.5	" arc="30" radius="4"rotation="0 90 0" color="#63ff47" radius-tubular="0.12" dynamic-body></a-torus>
+		<a-torus position="	1.8	10.8	-4.5	" arc="50" radius="4"rotation="0 90 0" color="#63ff47" radius-tubular="0.13" dynamic-body></a-torus>
+		<a-torus position="	1.8	10.9	-4.5	" arc="50" radius="4"rotation="0 90 0" color="#63ff47" radius-tubular="0.14" dynamic-body></a-torus>
+		<a-torus position="	1.8	11	-4.5	" arc="50" radius="4"rotation="0 90 0" color="#63ff47" radius-tubular="0.15" dynamic-body></a-torus>
+		<a-torus position="	1.8	11.1	-4.5	" arc="50" radius="4"rotation="0 90 0" color="#63ff47" radius-tubular="0.16" dynamic-body></a-torus>
+		<a-torus position="	1.8	11.2	-4.5	" arc="80" radius="4"rotation="0 90 0" color="#63ff47" radius-tubular="0.17" dynamic-body></a-torus>
+		<a-torus position="	1.8	11.3	-4.5	" arc="80" radius="4"rotation="0 90 0" color="#63ff47" radius-tubular="0.18" dynamic-body></a-torus>
+		<a-torus position="	1.8	11.4	-4.5	" arc="80" radius="4"rotation="0 90 0" color="#63ff47" radius-tubular="0.19" dynamic-body></a-torus>
+		<a-torus position="	1.8	11.5	-4.5	" arc="80" radius="4"rotation="0 90 0" color="#63ff47" radius-tubular="0.20" dynamic-body></a-torus>
+		<a-torus position="	1.8	11.6	-4.5	" arc="80" radius="4"rotation="0 90 0" color="#63ff47" radius-tubular="0.21" dynamic-body></a-torus>
+		<a-torus position="	1.8	11.7	-4.5	" arc="100" radius="4"rotation="0 90 0" color="#63ff47" radius-tubular="0.22" dynamic-body></a-torus>
+		<a-torus position="	1.8	11.8	-4.5	" arc="100" radius="4"rotation="0 90 0" color="#63ff47" radius-tubular="0.23" dynamic-body></a-torus>
+		<a-torus position="	1.8	11.9	-4.5	" arc="120" radius="4"rotation="0 90 0" color="#63ff47" radius-tubular="0.24" dynamic-body></a-torus>
+		<a-torus position="	1.8	12	-4.5	" arc="130" radius="4"rotation="0 90 0" color="#63ff47" radius-tubular="0.25" dynamic-body></a-torus>
+		<a-box position="0 1 -50" rotation="0"  color="black" width="30" height="5" static-body shadow
+		animation="property: object3D.position.z; to: -0.5; dir: alternate; dur: 10000; loop:2 ;"
+		animation__2="property: visible; from: true;to: false; dir: alternate; dur: 500;  delay: 100; loop: 20">
+		</a-box>
+		<a-sky color="#ececec"></a-sky>
+		</a-scene>
+	</body>
+</html>
